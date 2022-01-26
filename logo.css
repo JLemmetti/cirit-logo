@@ -1,0 +1,59 @@
+
+
+
+@keyframes show {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes delayedShow {
+  0% { opacity: 0; }
+  75% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes clockwise {
+  0% { transform: rotate(0.25turn); }
+  100% { transform: rotate(2turn); }
+}
+
+@keyframes counterClockwise {
+  0% { transform: rotate(0.75turn); }
+  100% { transform: rotate(-2turn); }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  /* outline: 1px solid #0003; */
+  margin: 20vh 0 0;
+
+}
+
+svg {
+  /* outline: 1px solid #0003; */
+  display: block;
+}
+
+.logo {
+  fill: #167EC4;
+  /* fill: #6A9E6A; */
+}
+
+.logomark {
+  animation: show 3s ease;
+}
+
+.logotype {
+  animation: delayedShow 4s linear;
+}
+
+.clockwise {
+  transform-origin: center;
+  animation: clockwise 3s ease-in-out;
+}
+
+.counterClockwise {
+  transform-origin: center;
+  animation: counterClockwise 3s ease-in-out;
+}
